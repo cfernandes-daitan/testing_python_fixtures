@@ -49,8 +49,8 @@ class TestSquare:
 
         mock_send.assert_called_once_with('cube')
 
-        # NOTE 1. Pytest's parametrize is the outer decorator, and last positional argument, but that's for convinience
-        # change the parametrize decorator order does not affect the final result as pytest 'args/fixtures' are named,
+        # NOTE 1. Pytest's parametrize is the outer decorator, and last positional argument, but that's for convinience.
+        # Changing the parametrize decorator order does not affect the final result as pytest 'args/fixtures' are named,
         # however its important that they are placed after the mocked arguments
 
         # NOTE 2. The mock positional arguments follows the order, first function mock, than class mock
