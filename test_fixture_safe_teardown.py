@@ -40,8 +40,11 @@ def mock_user() -> User:
     # safe teardown code after yield
     PhantomDB.users.pop()
 
-    # NOTE Django TestCase and Rest framework APITestCase run each test inside a db transaction
+    # NOTE 1. Django TestCase and Rest framework APITestCase run each test inside a db transaction
     # and automatically delete que objects created in the db, so there is no need for a manual teardown
+    # NOTE 2. pytest-django has a set of fixtures to achieve the same effect as listed above,
+    # and therefore no need for manual teardown for those kinds of db operations.
+    # To use it, add the pytest mark decorator: @pytest.mark.django_db (if added to the class, all function will have the desired effect)
 
 
 class TestUser:
