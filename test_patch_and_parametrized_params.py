@@ -23,7 +23,7 @@ def cube(x):
     return result
 
 
-@patch('python_test_fixture.test_patch_and_parametrized_params.send_operation_notification')
+@patch('testing_python_fixtures.test_patch_and_parametrized_params.send_operation_notification')
 class TestSquare:
 
     @pytest.mark.parametrize("x", [1, 10, 100])
@@ -56,7 +56,7 @@ class TestSquare:
         # NOTE 2. The mock positional arguments follows the order, first function mock, than class mock
 
 
-@patch('python_test_fixture.test_patch_and_parametrized_params.send_operation_notification')
+@patch('testing_python_fixtures.test_patch_and_parametrized_params.send_operation_notification')
 class TestCube(TestCase):
 
     @parameterized.expand([

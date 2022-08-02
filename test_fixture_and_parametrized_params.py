@@ -26,7 +26,7 @@ def test_square_sum(z:int, x:int, y:int) -> None: # param order does not matter 
     # A fixture defined within a test module/file will be only available in that module/file
 
 
-@patch('python_test_fixture.test_fixture_and_parametrized_params.send_operation_notification')
+@patch('testing_python_fixtures.test_fixture_and_parametrized_params.send_operation_notification')
 @pytest.mark.parametrize("x", [10, -10])
 def test_square_sum_with_mocked_notification(
     mock_send: Mock, # mocked argument must be placed prior to pytext computed args
